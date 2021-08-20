@@ -3,7 +3,6 @@ import debounce from '../../node_modules/lodash/debounce';
 import { input, result } from "./refs.js";
 import {renderedCountriesList, renderedCountryData} from './markup.js';
 import fetchCountries from './fetchCountries.js';
-
 import '@pnotify/core/dist/BrightTheme.css';
 
 //input.addEventListener('input', _.debounce(onSearchCountryChange, 500));
