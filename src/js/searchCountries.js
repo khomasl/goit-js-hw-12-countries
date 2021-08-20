@@ -12,6 +12,11 @@ input.addEventListener('input', debounce(onSearchCountryChange, 500));
 function onSearchCountryChange(evt){
     evt.preventDefault();
     const searchQuery = evt.target.value.toLowerCase();
+    
+    if (searchQuery === '') {
+      result.innerHTML = '';
+      return;
+    };
 
     fetchCountries(searchQuery)   
     .then(searchCountries => {
@@ -29,12 +34,19 @@ function onSearchCountryChange(evt){
         
         //notification
         error({
+          delay: 4000,
           text: 'Too many matches found. Please enter a more specific query!'
         });
+
+        result.innerHTML = '';
         
     })
     .catch(err => {
         result.innerHTML = '';
+        alert({
+          delay: 4000,
+          text: 'Don`t found. Please enter a correct query!'
+        });
         console.error("Error3: ", err);
     });
 }

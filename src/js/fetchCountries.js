@@ -4,6 +4,6 @@ export default function fetchCountries(searchQuery){
     .then(countries => countries.filter(country => country.name.toLowerCase().includes(searchQuery)))
     .catch(err => {
         console.error("Error2: ", err);
-        return [];
+        //return [];
     });
 }
