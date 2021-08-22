@@ -36,6 +36,6 @@ function onSearchCountryChange(evt){
     })
     .catch((err) => {
         result.innerHTML = '';
-        notifyAlert();
+        notifyAlert(err);
     });
 }
