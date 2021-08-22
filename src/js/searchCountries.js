@@ -17,7 +17,7 @@ function onSearchCountryChange(evt){
 
     fetchCountries(searchQuery)   
     .then(searchCountries => {
-        const numberCountries = searchCountries.length;  
+        const numberCountries = searchCountries.length; 
         
         if (numberCountries === 1) {
           renderedCountryData(searchCountries[0])

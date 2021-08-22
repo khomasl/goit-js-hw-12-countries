@@ -4,7 +4,7 @@ import '@pnotify/core/dist/BrightTheme.css';
 export function notifyAlert () {
     alert({
         delay: 4000,
-        text: 'Don`t found. Please enter a correct query!'
+        text: "Don`t found. Please enter a correct query!"
       });
 }
 
