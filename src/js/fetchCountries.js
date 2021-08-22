@@ -4,7 +4,7 @@ export default function fetchCountries(searchQuery){
          if (response.ok) { 
             return  response.json()
         }
-        //throw new Error("Don`t found. Please enter a correct query!");
+        throw new Error('Don`t found. Please enter a correct query!');
     })
     //.then(countries => countries.filter(country => country.name.toLowerCase().includes(searchQuery)))
 }
