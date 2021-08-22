@@ -11,6 +11,6 @@ export function notifyAlert () {
 export function notifyError(msg) {
     error({
         delay: 4000,
-        text: msg,
+        text: msg
       });
 };
