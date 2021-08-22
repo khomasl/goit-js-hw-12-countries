@@ -34,7 +34,7 @@ function onSearchCountryChange(evt){
         result.innerHTML = '';
         
     })
-    .catch(() => {
+    .catch((err) => {
         result.innerHTML = '';
         notifyAlert();
     });
