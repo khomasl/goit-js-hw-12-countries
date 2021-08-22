@@ -6,5 +6,10 @@ export default function fetchCountries(searchQuery){
         }
         throw new Error('Don`t found. Please enter a correct query!');
     })
+    .catch((error) => {
+        result.innerHTML = '';
+        notifyAlert(error);
+
+    });
     //.then(countries => countries.filter(country => country.name.toLowerCase().includes(searchQuery)))
 }
