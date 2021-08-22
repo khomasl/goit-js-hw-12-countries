@@ -8,6 +8,7 @@ input.addEventListener('input', debounce(onSearchCountryChange, 500));
 
 function onSearchCountryChange(evt){
     evt.preventDefault();
+    
     const searchQuery = evt.target.value.toLowerCase();
     
     if (searchQuery === '') {
