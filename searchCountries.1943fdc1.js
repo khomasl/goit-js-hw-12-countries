@@ -5,7 +5,7 @@ var t,e=arguments[3];!function(e,n){"object"==typeof exports&&"undefined"!=typeo
 },{}],"xSVp":[function(require,module,exports) {
 
 },{}],"Kazp":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.notifyAlert=r,exports.notifyError=t;var e=require("../../node_modules/@pnotify/core/dist/PNotify.js");function r(){(0,e.alert)({delay:4e3,text:"Don`t found. Please enter a correct query!"})}function t(){(0,e.error)({delay:4e3,text:"Too many matches found. Please enter a more specific query!"})}require("@pnotify/core/dist/BrightTheme.css");
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.notifyAlert=r,exports.notifyError=t;var e=require("../../node_modules/@pnotify/core/dist/PNotify.js");function r(){(0,e.alert)({delay:4e3,text:"Don`t found. Please enter a correct query!"})}function t(r){(0,e.error)({delay:4e3,text:r})}require("@pnotify/core/dist/BrightTheme.css");
 },{"../../node_modules/@pnotify/core/dist/PNotify.js":"txz9","@pnotify/core/dist/BrightTheme.css":"xSVp"}],"u9vI":[function(require,module,exports) {
 function n(n){var o=typeof n;return null!=n&&("object"==o||"function"==o)}module.exports=n;
 },{}],"j3D9":[function(require,module,exports) {
@@ -42,6 +42,6 @@ var i=require("./isObject"),t=require("./now"),r=require("./toNumber"),n="Expect
 },{"./refs.js":"VyiV"}],"irxn":[function(require,module,exports) {
 "use strict";function e(e){return fetch("https://restcountries.eu/rest/v2/name/".concat(e)).then(function(e){if(e.ok)return e.json();throw new Error("Don`t found. Please enter a correct query!")})}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e;
 },{}],"pj9Y":[function(require,module,exports) {
-"use strict";var e=require("./notify.js"),r=i(require("../../node_modules/lodash/debounce")),t=require("./refs.js"),n=require("./markup.js"),u=i(require("./fetchCountries.js"));function i(e){return e&&e.__esModule?e:{default:e}}function o(r){r.preventDefault();var i=r.target.value.toLowerCase();""!==i?(0,u.default)(i).then(function(r){var u=r.length;1!==u?u<=10?(0,n.renderedCountriesList)(r):((0,e.notifyError)(),t.result.innerHTML=""):(0,n.renderedCountryData)(r[0])}).catch(function(r){t.result.innerHTML="",(0,e.notifyAlert)()}):t.result.innerHTML=""}t.input.addEventListener("input",(0,r.default)(o,500));
+"use strict";var e=require("./notify.js"),r=i(require("../../node_modules/lodash/debounce")),t=require("./refs.js"),n=require("./markup.js"),u=i(require("./fetchCountries.js"));function i(e){return e&&e.__esModule?e:{default:e}}function o(r){r.preventDefault();var i=r.target.value.toLowerCase();""!==i?(0,u.default)(i).then(function(r){var u=r.length;1!==u?u<=10?(0,n.renderedCountriesList)(r):((0,e.notifyError)(),t.result.innerHTML=""):(0,n.renderedCountryData)(r[0])}).catch(function(r){t.result.innerHTML="",(0,e.notifyAlert)(r)}):t.result.innerHTML=""}t.input.addEventListener("input",(0,r.default)(o,500));
 },{"./notify.js":"Kazp","../../node_modules/lodash/debounce":"CXfR","./refs.js":"VyiV","./markup.js":"tW6H","./fetchCountries.js":"irxn"}]},{},["pj9Y"], null)
-//# sourceMappingURL=/goit-js-hw-12-countries/searchCountries.886decc4.js.map
+//# sourceMappingURL=/goit-js-hw-12-countries/searchCountries.1943fdc1.js.map
