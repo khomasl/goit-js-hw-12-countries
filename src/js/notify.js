@@ -8,9 +8,9 @@ export function notifyAlert () {
       });
 }
 
-export function notifyError(msg) {
+export function notifyError() {
     error({
         delay: 4000,
-        text: msg
+        text: "Too many matches found. Please enter a more specific query!"
       });
 };
