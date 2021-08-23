@@ -2,10 +2,10 @@
   "name": "goit-js-hw-12-countries",
   "version": "1.0.0",
   "description": "",
-  "main": "searchCountries.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/js/searchCountries.js",
+    "start": "node ./src/js/index.js",
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-12-countries/",
     "deploy": "gh-pages -d dist",

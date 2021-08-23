@@ -1,5 +1,5 @@
 import {notifyAlert, notifyError} from './notify.js';
-import debounce from '../../node_modules/lodash/debounce';
+import debounce from 'lodash/debounce';
 import { input, result } from "./refs.js";
 import {renderedCountriesList, renderedCountryData} from './markup.js';
 import fetchCountries from './fetchCountries.js';
